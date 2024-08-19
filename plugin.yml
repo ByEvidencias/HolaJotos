@@ -1,0 +1,5 @@
+name: HolaJotos
+version: 1.0.0
+main: HolaJotos\ByEvidencias\Main
+author: ByEvidencias
+api: [5.0.0]
