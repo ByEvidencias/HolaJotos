@@ -1,0 +1,13 @@
+# Aquí puedes personalizar el mensaje de bienvenida
+welcome-message: "§8[§a+§8] §e{player} §7se ha unido al servidor!"
+
+# Aquí puedes personalizar el mensaje de despedida
+quit-message: "§8[§c-§8] §e{player} §7se ha salido del servidor!"
+
+# Este mensaje solo lo puede ver el usuario que entra al servidor
+private-message:
+  - "§d ¡No te olvides de seguirnos en nuestras redes!"
+  - "§cYoutube§7:§a Fernfloo"
+  - "§bDiscord§7:§a .gg/Fernafloo"
+
+# Para modificar los colores puedes usar tanto "&", como "§"
