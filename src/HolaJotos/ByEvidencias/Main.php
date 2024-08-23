@@ -4,20 +4,17 @@ namespace HolaJotos\ByEvidencias;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
+use pocketmine\utils\SingletonTrait;
 use HolaJotos\ByEvidencias\events\Join;
 use HolaJotos\ByEvidencias\events\Quit;
-use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase implements Listener {
+    use SingletonTrait;
 
-    public function onEnable(): void {
-        $this->getServer()->getPluginManager()->registerEvents(new Join($this), $this);
-        $this->getServer()->getPluginManager()->registerEvents(new Quit($this), $this);
-        
-        $this->getLogger()->info(TextFormat::GREEN . "HolaJotos plugin has been enabled!");
-    }
+    protected function onEnable(): void {
+        self::setInstance($this); 
 
-    public function onDisable(): void {
-        $this->getLogger()->info(TextFormat::RED . "HolaJotos plugin has been disabled!");
+        $this->getServer()->getPluginManager()->registerEvents(new Join(), $this);
+        $this->getServer()->getPluginManager()->registerEvents(new Quit(), $this);
     }
 }
